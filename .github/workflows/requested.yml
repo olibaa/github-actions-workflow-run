@@ -11,6 +11,5 @@ jobs:
   on-requested:
     name: On Requested
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == '' }}
     steps:
-      - run: echo 'The triggering requested'
+      - run: echo 'The triggering workflow failed'
