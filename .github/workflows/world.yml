@@ -1,0 +1,13 @@
+name: World
+on:
+  workflow_run:
+    workflows:
+      - Hello
+    types:
+      - completed
+
+jobs:
+  world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "World"
